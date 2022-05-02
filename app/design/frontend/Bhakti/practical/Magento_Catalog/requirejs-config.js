@@ -1,6 +1,6 @@
 var config = {
     paths: {
-        slickSlider: 'js/slick-slider'
+        stickeyContent: "Magento_Catalog/js/sticky-pdp"
     },
     shim: {
         slick: {

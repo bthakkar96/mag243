@@ -31,8 +31,10 @@
 @link__color: @theme__color__primary-alt;
 
 //  Focus
-@focus__color: @color-blue3;
+@focus__color: false;
 
+//  Color
+@primary__color: @color-black;
 //
 //  Tables
 //  ---------------------------------------------
@@ -50,7 +52,8 @@
 
 //  Variables for layout columns
 @layout-column__sidebar-width: 5;
-
+@layout-indent__width: 20px;
+@layout__max-width: 1480px;
 //  Checkout columns width
 @layout-column-checkout__width-left: 6;
 
@@ -58,7 +61,7 @@
 //  Navigation
 //  ---------------------------------------------
 
-@navigation__background: @color-gray94;
+@navigation__background: @color-white; 
 @navigation-level0-item__active__color: @primary__color;
 
 @submenu-item__active__color: @navigation-level0-item__active__color;
@@ -84,7 +87,7 @@
 //  Accordion
 //  ---------------------------------------------
 
-@accordion-control__font-family: false;
+@accordion-control__font-family: false; 
 @accordion-control__font-size: @font-size__base;
 @accordion-control__font-style: false;
 @accordion-control__font-weight: @font-weight__semibold;
@@ -118,10 +121,25 @@
 @button__active__background: @color-gray-darken1;
 
 //  Primary button
-@button-primary__hover__color: @color-white;
-@button-primary__active__background: @link__hover__color;
-@button-primary__active__border: 1px solid @link__hover__color;
-@button-primary__active__color: @color-white;
+@button-primary__hover__color: @color-black;
+@button-primary__active__background: @color-white;
+@button-primary__active__border: 1px solid @color-black;
+@button-primary__active__color: @color-black;
+
+
+
+
+@button-primary__background: @color-black;
+@button-primary__border: 1px solid @color-black;
+@button-primary__color: @color-white;
+@button__border-radius: 100px;
+
+@button-primary__hover__background: @color-white;
+@button-primary__hover__border: 1px solid @color-black;
+@button-primary__hover__color: @color-black;
+
+
+
 
 //  Button with icon
 @button-icon__line-height: @icon-font__line-height;
