@@ -126,13 +126,12 @@
             @_dropdown-list-item-padding: false,
             @_dropdown-list-item-hover: false,
             @_icon-font-position: before,
-            @_icon-font-size: 22px,
-            @_icon-font-line-height: 28px,
-            @_icon-font-color: @minicart-icons-color,
-            @_icon-font-color-hover: @minicart-icons-color-hover,
-            @_icon-font-color-active: @minicart-icons-color
+            @_icon-font-size: 15px,
+            @_icon-font-line-height: 15px,
+            @_icon-font-color: @color-black,
+            @_icon-font-color-hover: @color-black,
+            @_icon-font-color-active: @color-black
         );
-        float: right;
 
         .block-minicart {
             .lib-css(padding, 25px @minicart__padding-horizontal);
@@ -168,7 +167,7 @@
                 .lib-button-reset();
                 .lib-button-icon(
                     @icon-remove,
-                    @_icon-font-color: @minicart-icons-color,
+                    @_icon-font-color: @color-black,
                     @_icon-font-size: 14px,
                     @_icon-font-line-height: 14px,
                     @_icon-font-text-hide: true
@@ -397,9 +396,9 @@
                     @_icon-font-size: 18px,
                     @_icon-font-line-height: 20px,
                     @_icon-font-text-hide: true,
-                    @_icon-font-color: @minicart-icons-color,
+                    @_icon-font-color: @color-black,
                     @_icon-font-color-hover: @primary__color,
-                    @_icon-font-color-active: @minicart-icons-color
+                    @_icon-font-color-active: @color-black
                 );
             }
 
@@ -424,8 +423,9 @@
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .minicart-wrapper {
-        margin-top: @indent__s;
         .lib-clearfix();
+        margin-top: 0;
+        margin-left: 12px;
         .product {
             .actions {
                 float: left;

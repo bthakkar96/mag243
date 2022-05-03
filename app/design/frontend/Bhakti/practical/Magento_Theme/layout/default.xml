@@ -10,6 +10,8 @@
          <move element="navigation.sections" destination="header-wrapper" after="logo"/>
          <referenceBlock name="header" remove="true"/>
          <referenceBlock name="register-link" remove="true" />
-         <move element="header.panel" destination="header-wrapper" after="top.search"/>
+         <move element="top.search" destination="header-wrapper" after="navigation.sections"/>
+         <move element="minicart" destination="header-wrapper" after="top.search"/>
+         <move element="header.panel" destination="header-wrapper" after="minicart"/>
     </body>
 </page>

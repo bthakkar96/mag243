@@ -7,16 +7,28 @@
 -->
 <page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceBlock name="product.info.upsell" remove="true"/>
-
         <referenceContainer name="content">
-            <container name="product-imgs" htmlTag="div" htmlClass="product-imgs-container" before="product.info.details">
-                <block class="Magento\Framework\View\Element\Template" name="imgs" template="Magento_Catalog::product/view/product-img.phtml"/>
+            <container name="product-imgs" htmlTag="div" htmlClass="product-imgs-container" before="product.info.details" />
+            <container name="product-designer-info" htmlTag="div" htmlClass="product-designer-info" after="product.info.details" >
+                <block class="Magento\Framework\View\Element\Template" name="designer-info" template="Magento_Catalog::product/view/product-designer-info.phtml" />
             </container>
         </referenceContainer>
-        <referenceContainer name="product.info.media" remove="true"/>
+        
+        <referenceBlock name="product.info.main" >
+            <block class="Magento\Framework\View\Element\Template" name="offer-info" template="Magento_Catalog::product/view/offer.phtml" after="product.info.addtocart"/>
+        </referenceBlock>
+        <move element="product.info.media" destination="product-imgs" />
+        <move element="product.info.overview" destination="page.main.title" />
+        <move element="product.info.addto" destination="product-imgs" />
+        <!-- <move element="product-designer-info" destination="content" after="-"/> -->
         <referenceContainer name="content.aside" remove="true"/>
-       
-        <!-- <move element="product.info.details" before="product-imgs" /> -->
+        <referenceBlock name="breadcrumbs" remove="true" />
+        <referenceBlock name="product.info.upsell" remove="true"/>
+        <referenceBlock name="product.info.review" remove="true" />
+        <referenceBlock name="product.info.sku" remove="true" />
+        <referenceBlock name="copyright" remove="true"/>
+        <referenceContainer name="footer" remove="true" />
+        <referenceBlock name="product.info.stock.sku" remove="true"/>
+        <referenceBlock name="view.addto.compare" remove="true" /> 
     </body>
 </page>

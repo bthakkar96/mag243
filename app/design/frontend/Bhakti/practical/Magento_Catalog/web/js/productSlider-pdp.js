@@ -2,34 +2,29 @@ require([
     'jquery', 
     'jquery/ui', 
     'slick'], function($) {
-    $(document).ready(function() {
+    function sizing() {
         $(".product-img-wrp").slick({
             dots: true,
-            arrow: false,
+            arrows : false,
             infinite: false,
             slidesToShow: 1,
             slidesToScroll: 1,
             responsive: [
                 {
-                    breakpoint: 2000,
+                    breakpoint: 5000,
                     settings: "unslick"
                 },
                 {
-                    breakpoint: 1600,
-                    settings: "unslick"
-                },
-                {
-                    breakpoint: 768,
-                    settings: "unslick"
-                },
-                {
-                    breakpoint: 767,
+                    breakpoint: 1360,
                     settings: {
+                        arrows : false,
                         slidesToShow: 1,
                         slidesToScroll: 1
                     }
                 }
             ]
         });
-    });
+    }
+    $(document).ready(sizing);
+    $(window).resize(sizing);
 });

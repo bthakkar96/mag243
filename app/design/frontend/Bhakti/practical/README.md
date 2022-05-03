@@ -20,37 +20,16 @@ After installing the theme, you can verify that the installation succeeded by go
 
 To set this theme for development purposes on the storefront, go to: **Content -> Design -> Configuration** and set the theme on the Store View you wish to use. Do not forget to flush the cache afterwards.
 
+### Add a logo to store
+Navigate to **Content -> Design -> Themes -> edit store -> header -> logo**.
 
-### Create a multi-language store
+### Add a product description 
+Navigate to **Catalog -> Product -> open product -> content ->  Short Description**.
 
-Inside Magento 2 admin go to Stores – Configuration – All store and please follow steps bellow and create new store view.
-https://tinyurl.com/ydzy9ws9
-
-Magento 2 admin go to Stores – Configuration – (select scope france) 
-
-Go to general -> general
-1) Country Options -> select france
-2) Locale Options -> Locale -> select french(france)
-
-### Create a multi-currency 
-Go to currency setup ->  Currency Options -> Allowed Currencies (select the currencies you want)
-
-
-### Backend cms block changes
-I've attached html file with the email. please add it in backend and block id will be file name.
-
-1) To add header top bar, go to content -> blocks -> add new block and then add block content given in the mail and keep the id header-top-bar
-
-### Backend language change for navigation menu
-
-1) Go to Catalog -> categories 
-2) change Scope: France
-3) unselect Use Default Value in Category Name
-4) Add the name in french
-
-
-### Video link
-https://www.awesomescreenshot.com/video/8338432?key=00309a55697429acedb6fe1546cb264d
-
+### Add a product image
+Navigate to **Catalog -> Product -> open product -> content ->  Images And Videos**.
+### Preview
+Desktop: https://www.awesomescreenshot.com/image/26580102?key=01b5fc917e87adba4de5a1e20a1b5940
+Mobile: https://www.awesomescreenshot.com/image/26580144?key=b153e49741a22b31cd41a521f927c7d4
 ```
 

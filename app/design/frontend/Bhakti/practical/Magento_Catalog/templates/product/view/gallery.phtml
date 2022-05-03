@@ -1,0 +1,15 @@
+<?php
+$galleryImages = $this->getGalleryImages();
+$_product = $this->getProduct();
+?>
+
+<div class="main-image-container">
+    <div class="main-image product-img-wrp" data-mage-init='{"productSlider":{}}'>
+        <?php foreach ($galleryImages as $image): ?>
+            <div class="product-img-box">
+                <a href="javascript:;" class="product-image"><img class="lazyload" src="<?= $image->getData('medium_image_url')?>" salt="<?= $_product->getName() ?>" />
+                </a>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>

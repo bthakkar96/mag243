@@ -67,6 +67,10 @@
         .lib-css(background-color, @page__background-color);
     }
 
+    * {
+        box-sizing: border-box;
+    }
+
     .page-wrapper {
         .lib-vendor-prefix-display(flex);
         .lib-vendor-prefix-flex-direction(column);
@@ -90,12 +94,11 @@
     //  ---------------------------------------------
 
     .page-header {
-        .lib-css(background-color, @header__background-color);
-        border-bottom: 1px solid @border-color__base;
         margin-bottom: @indent__base;
     }
 
     .header.panel {
+        padding: 0;
         > .header.links {
             .lib-list-inline();
             float: right;
@@ -107,13 +110,17 @@
                 font-size: @font-size__base;
                 margin: 0 0 0 15px;
                 &.authorization-link {
-                    &::after {
-                        content: '';
-                        height: 24px;
-                        width: 24px;
-                        background: url('@{baseDir}images/icons/account.svg') no-repeat;
-                        display: inline-block;
+                    a {
+                        font-size: 0;
+                        &::after {
+                            content: '';
+                            height: 24px;
+                            width: 24px;
+                            background: url('@{baseDir}images/icons/account.svg') no-repeat;
+                            display: inline-block;
+                        }
                     }
+
                 }
                 &.customer-welcome {
                     margin: 0 0 0 5px;
@@ -124,7 +131,7 @@
 
     .header {
         &.content:extend(.abs-add-clearfix all) {
-            padding-top: @indent__s;
+            padding-top: @indent__s + 8;
             position: relative;
         }
     }
@@ -447,7 +454,13 @@
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-
+    .header.content {
+        .lib-vendor-prefix-display(flex);
+        padding-right: 54px;
+    }
+    .logo {
+        flex: 1;
+    }
 }
 
 //
@@ -480,8 +493,7 @@
         margin-bottom: 0;
 
         .header.panel:extend(.abs-add-clearfix-desktop all) {
-            padding-bottom: @indent__s;
-            padding-top: @indent__s;
+            padding: 0;
         }
 
         .switcher {
@@ -630,6 +642,7 @@
 
     .logo {
         display: inline-block;
+        margin-right: 55px;
         img {
             max-height: inherit;
         }
