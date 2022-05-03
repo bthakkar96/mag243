@@ -2,29 +2,31 @@ require([
     'jquery', 
     'jquery/ui', 
     'slick'], function($) {
-    function sizing() {
-        $(".product-img-wrp").slick({
-            dots: true,
-            arrows : false,
-            infinite: false,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            responsive: [
-                {
-                    breakpoint: 5000,
-                    settings: "unslick"
-                },
-                {
-                    breakpoint: 1360,
-                    settings: {
-                        arrows : false,
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-    }
-    $(document).ready(sizing);
-    $(window).resize(sizing);
+    mobileOnlySlider(".product-img-wrp", true, false, 1360);
+
+    function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
+	var slider = $($slidername);
+	var settings = {
+		mobileFirst: true,
+		dots: $dots,
+		arrows: $arrows,
+		responsive: [
+			{
+				breakpoint: $breakpoint,
+				settings: "unslick"
+			}
+		]
+	};
+
+	slider.slick(settings);
+
+	$(window).on("resize", function () {
+		if ($(window).width() > $breakpoint) {
+			return;
+		}
+		if (!slider.hasClass("slick-initialized")) {
+			return slider.slick(settings);
+		}
+	});
+} // Mobile Only Slider
 });
