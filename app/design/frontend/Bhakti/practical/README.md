@@ -29,7 +29,7 @@ Navigate to **Catalog -> Product -> open product -> content ->  Short Descriptio
 ### Add a product image
 Navigate to **Catalog -> Product -> open product -> content ->  Images And Videos**.
 ### Preview
-Desktop: https://www.awesomescreenshot.com/image/26580102?key=01b5fc917e87adba4de5a1e20a1b5940
-Mobile: https://www.awesomescreenshot.com/image/26580144?key=b153e49741a22b31cd41a521f927c7d4
+Desktop: https://www.awesomescreenshot.com/image/26612970?key=eba684b666df3d6c1b110d49417e0a2b
+Mobile: https://www.awesomescreenshot.com/image/26612985?key=ee914e8acec5cf4f6fb1fc620350c862
 ```
 
