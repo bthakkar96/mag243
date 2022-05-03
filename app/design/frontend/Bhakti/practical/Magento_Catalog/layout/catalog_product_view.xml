@@ -8,18 +8,24 @@
 <page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
-            <container name="product-imgs" htmlTag="div" htmlClass="product-imgs-container" before="product.info.details" />
-            <container name="product-designer-info" htmlTag="div" htmlClass="product-designer-info" after="product.info.details" >
+            <container name="product-designer-info" htmlTag="div" htmlClass="product-designer-info" after="product-main-info" >
                 <block class="Magento\Framework\View\Element\Template" name="designer-info" template="Magento_Catalog::product/view/product-designer-info.phtml" />
             </container>
+                    <container name="product-main-info" htmlTag="div" htmlClass="product-main-info" after="product.info.details" >
+                <container name="product-imgs" htmlTag="div" htmlClass="product-imgs-container" before="product.info.details" />
+        </container>
         </referenceContainer>
-        
+
         <referenceBlock name="product.info.main" >
             <block class="Magento\Framework\View\Element\Template" name="offer-info" template="Magento_Catalog::product/view/offer.phtml" after="product.info.addtocart"/>
         </referenceBlock>
         <move element="product.info.media" destination="product-imgs" />
         <move element="product.info.overview" destination="page.main.title" />
         <move element="product.info.addto" destination="product-imgs" />
+        <move element="product.info.main" destination="product-main-info" />
+        <move element="product.info.details" destination="product-main-info" />
+       
+        
         <!-- <move element="product-designer-info" destination="content" after="-"/> -->
         <referenceContainer name="content.aside" remove="true"/>
         <referenceBlock name="breadcrumbs" remove="true" />

@@ -7,7 +7,7 @@
 //  Variables
 //  _____________________________________________
 
-@swatch-attribute-option__selected__color: #646464;
+@swatch-attribute-option__selected__color: @primary__color;
 
 @swatch-option__background: @color-gray94;
 @swatch-option__border: @border-width__base solid #dadada;
@@ -89,6 +89,7 @@
             &-selected-option {
                 .lib-css(color, @swatch-attribute-option__selected__color);
                 padding-left: 17px;
+                text-transform: uppercase;
             }
 
             &-options {
@@ -184,6 +185,12 @@
                     .lib-css(border, @img-color-swatch-option__hover__border);
                     .lib-css(outline, @img-color-swatch-option__hover__outline);
                 }
+            }
+
+            &.color {
+                width: 52px;
+                height: 64px;
+                border: 1px solid @border-color__base; 
             }
 
             &.disabled {
