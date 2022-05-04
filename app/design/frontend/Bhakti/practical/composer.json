@@ -1,12 +1,12 @@
 {
-    "name": "bhakti/encora",
-    "description": "bhakti encora",
+    "name": "bhakti/practical",
+    "description": "bhakti practical",
     "require": {
         "php": "~5.6.0|>=7.0.0",
         "magento/theme-frontend-blank": "100.4.*",
         "magento/theme-frontend-luma": "100.4.*",
         "magento/module-checkout": "^100.3.3",
-        "bhakti/encora": "~2.0.26"
+        "bhakti/practical": "~2.0.26"
     },
     "type": "magento2-theme",
     "license": [
